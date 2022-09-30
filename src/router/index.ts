@@ -8,6 +8,16 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView
   },
   {
+    path: '/restaurant',
+    name: 'restaurant',
+    component: () => import('../views/RestaurantView.vue')
+  },
+  {
+    path: '/garden',
+    name: 'garden',
+    component: () => import('../views/GardenView.vue')
+  },
+  {
     path: '/about',
     name: 'about',
     // route level code-splitting
