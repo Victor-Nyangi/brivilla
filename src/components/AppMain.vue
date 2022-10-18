@@ -12,7 +12,11 @@
             <h3>Exploring The World</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
-            <router-link to="/garden">Explore</router-link>
+            <router-link to="/garden">Wedding Garden</router-link>
+            <div>
+            <router-link to="/restaurant">Forest Restaurant</router-link>
+            </div>
+
         </div>
         <ul class="social">
             <li>

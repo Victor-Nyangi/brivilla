@@ -45,7 +45,7 @@
               Try the best drinks in <br />
               the forest.
             </h2>
-            <a href="#" class="button">View Menu</a>
+            <router-link to="/garden"  class="button">Visit the Garden</router-link>
           </div>
 
           <img src="../../assets/img/brivilla-wines-liquor-stock.jpg" alt="Brivilla Wines" class="home-img" />
@@ -82,7 +82,7 @@
     <div class="app__specialMenu-menu">
       <div class="app__specialMenu-menu_wine  flex__center">
         <p class="app__specialMenu-menu_heading">Mocktails</p>
-          <div class="app__specialMenu_menu_items" v-bind:key="cocktail.id" v-for="cocktail in cocktails.slice(0, 5)">
+          <div class="app__specialMenu_menu_items" v-bind:key="cocktail.id" v-for="cocktail in drinks.cocktails.slice(0, 5)">
           <MenuItem v-bind:cocktail="cocktail" />
         </div>
       </div>
@@ -99,7 +99,7 @@
       </div> -->
       <div class="app__specialMenu-menu_cocktails  flex__center">
         <p class="app__specialMenu-menu_heading">Cocktails</p>
-         <div class="app__specialMenu_menu_items" v-bind:key="cocktail.id" v-for="cocktail in cocktails.slice(6, 10)">
+         <div class="app__specialMenu_menu_items" v-bind:key="cocktail.id" v-for="cocktail in cocktails.slice(5, 11)">
           <MenuItem v-bind:cocktail="cocktail" />
         </div>
         <!-- <div v-for="cocktail in cocktails" v-bind:key="cocktail.id">
@@ -220,14 +220,14 @@
         <div class="footer__content">
           <h3 class="footer__title">Address</h3>
           <ul>
-            <li>Lima - Peru</li>
-            <li>Jr Union #999</li>
+           <li>Kenya - Kiambu </li>
+            <li>Thika - Gatuanyaga </li>
             <li>999 - 888 - 777</li>
-            <li>brivilla@email.com</li>
+            <li>brivilla@gmail.com</li>
           </ul>
         </div>
       </div>
-      <p class="footer__copy">&#169; 2020 Bedimcode. All right reserved</p>
+      <p class="footer__copy">&#169; 2022 Brivilla. All right reserved</p>
     </footer>
      <!-- 'name',
         'supplier_id',
@@ -254,6 +254,57 @@ export default {
   components: {
     MenuItem,
     ServicesItem
+  },
+  data () {
+    return {
+      drinks: {
+        cocktails: [
+          { id: 1, name: 'Pisco Punch', contents: 'Pineapple, lemon, orange, cloves, champagne', selling_price: 450 },
+          { id: 2, name: 'HANKY-PANKY', contents: 'Gin, Sweet Vermouth, Fernet-Branca', selling_price: 350 },
+          { id: 3, name: 'TI’ PUNCH', contents: 'Sugar Syrup, Lime, rhum agricole.', selling_price: 300 },
+          { id: 4, name: 'PAINKILLER', contents: 'Pineapple, Orange juice, coconut cream.', selling_price: 450 },
+          { id: 5, name: 'LAST WORD', contents: 'Gin, green chartreuse, Maraschino liqueur, lime juice.', selling_price: 350 },
+          { id: 6, name: 'IRISH COFFEE', contents: 'Hot sweet coffee, Irish whiskey', selling_price: 550 },
+          { id: 7, name: 'BOBBY BURNS', contents: 'Blended Scotch, sweet vermouth, and Benedictine', selling_price: 300 },
+          { id: 8, name: 'TOMMY’S MARGARITA', contents: 'Margarita', selling_price: 300 },
+          { id: 9, name: 'BLOOD & SAND', contents: 'Whisky, sweet vermouth, cherry liqueur, orange juice.', selling_price: 400 },
+          { id: 10, name: 'CORPSE REVIVER #2', contents: 'Gin, lemon juice, Cointreau, Lillet Blanc, absinthe.', selling_price: 300 },
+          { id: 11, name: 'SIDECAR', contents: 'Brandy, lemon, and triple sec', selling_price: 300 }
+        ]
+        // cocktails: [
+        //   {
+        //     id: 1,
+        //     title: 'Aperol Sprtiz',
+        //     price: '$20',
+        //     tags: 'Aperol | Villa Marchesi prosecco | soda | 30 ml'
+        //   },
+        //   {
+        //     id: 2,
+        //     title: 'Dark N Stormy',
+        //     price: '$16',
+        //     tags: 'Dark rum | Ginger beer | Slice of lime'
+        //   },
+        //   {
+        //     id: 3,
+        //     title: 'Daiquiri',
+        //     price: '$10',
+        //     tags: 'Rum | Citrus juice | Sugar'
+        //   },
+        //   {
+        //     id: 4,
+        //     title: 'Old Fashioned',
+        //     price: '$31',
+        //     tags: 'Bourbon | Brown sugar | Angostura Bitters'
+        //   },
+        //   {
+        //     id: 5,
+        //     title: 'Negroni',
+        //     price: '$26',
+        //     tags: 'Gin | Sweet Vermouth | Campari | Orange garnish'
+        //   }
+        // ]
+      }
+    }
   },
   computed: {
     // products () {

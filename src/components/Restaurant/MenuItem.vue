@@ -27,6 +27,7 @@ export default {
 <style scoped lang="scss">
 .p__cormorant {
     font-family: 'Cormorant Upright', serif;
+    text-transform: capitalize;
     color: #443e79
 }
 
